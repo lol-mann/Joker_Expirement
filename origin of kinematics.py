@@ -5,7 +5,6 @@
 
 from big_ol_pile_of_manim_imports import *
 import numpy as np
-from itertools import tee
 
 class Intro_scene(Scene):
     def construct(self):
