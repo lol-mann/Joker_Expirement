@@ -21,6 +21,7 @@ class Intro_scene(Scene):
         group = VGroup(example_text,example_tex)
         group.arrange_submobjects(DOWN)
         group.set_width(FRAME_WIDTH - 2 * LARGE_BUFF)
+        group.move_to(2*UP)
 
         self.play(FadeIn(example_text))
         self.wait(1)
