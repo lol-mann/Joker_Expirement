@@ -3,7 +3,6 @@
 # Author : Sanjeev
 #######################################################
 
-%%writefile origin_of_kinematics_1.py
 from big_ol_pile_of_manim_imports import *
 import numpy as np
 from itertools import tee
