@@ -35,7 +35,7 @@ class SimplePendulum(VMobject):
 
     def __init__(self,length=2,mass_of_bob=1,gravity=9.81,damping=0, **kwargs):
         VMobject.__init__(self, **kwargs)
-        line1 = Line(ORIGIN, UP,stroke_width=1)
+        line1 = Line(ORIGIN, UP,stroke_width=1,stroke_color=BLACK)
         dot1 = Dot(color=self.color1).scale(1.5)
         dot1.add_updater(lambda d: d.move_to(line1.get_end()))
 
