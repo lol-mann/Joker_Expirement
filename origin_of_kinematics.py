@@ -33,7 +33,7 @@ class SimplePendulum(VMobject):
         "color1": RED,
     }
 
-    def __init__(self,length=2,mass_of_bob=1,gravity=9.81,damping=0, **kwargs):
+    def __init__(self,pos=ORIGIN,length=2,mass_of_bob=1,gravity=9.81,damping=0, **kwargs):
         VMobject.__init__(self, **kwargs)
         line1 = Line(ORIGIN, UP,stroke_width=1,stroke_color=BLACK)
         dot1 = Dot(color=self.color1).scale(1.5)
@@ -57,7 +57,7 @@ class SimplePendulum(VMobject):
                 self.count+=1
             sol = odeint(deriv, y0, self.time_list, args=(self.b, self.c))
             p1 = np.sin(sol[-1, 0])* RIGHT * 2 + np.cos(sol[-1, 0]) * DOWN * 2
-            line1.put_start_and_end_on(ORIGIN, p1)
+            line1.put_start_and_end_on(pos, pos+p1)
 
         def deriv(y, t, b, c):
             theta, omega = y
