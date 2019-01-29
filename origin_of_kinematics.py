@@ -5,7 +5,7 @@
 
 from big_ol_pile_of_manim_imports import *
 import numpy as np
-
+from scipy.integrate import odeint
 class Intro_scene(Scene):
     def construct(self):
         background_square=Square(side_length=20,fill_color=WHITE, fill_opacity=1)
