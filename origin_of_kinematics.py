@@ -47,14 +47,11 @@ class SimplePendulum(VMobject):
         self.g = gravity
         self.time=0
         self.time_list = []
-        self.count=0
         def update(group, dt):
             self.time+=dt
             y0 = [np.pi/12, 0.0]
             line1 = group.submobjects[0]
             self.time_list.append(self.time)
-            if self.count<3:
-                self.count+=1
             sol = odeint(deriv, y0, self.time_list, args=(self.b, self.c))
             p1 = np.sin(sol[-1, 0])* RIGHT * 2 + np.cos(sol[-1, 0]) * DOWN * 2
             line1.put_start_and_end_on(pos, pos+p1)
