@@ -44,7 +44,7 @@ class SimplePendulum(VMobject):
 
 class Satellite(VMobject):
     CONFIG = {
-	"normal_vector_color":RED
+	"normal_vector_color":RED,
 	"tangent_vector_color":RED
 	
 
