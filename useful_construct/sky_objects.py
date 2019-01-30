@@ -52,7 +52,7 @@ class Satellite(VMobject):
 
     def __init__(self,radius=2,planet_pos=ORIGIN,add_tangent=True, **kwargs):
         VMobject.__init__(self, **kwargs)
-        satellite = SVGMobject("satellite.svg").scale(0.25)
+        satellite = ImageMobject("satellite.svg").scale(0.25)
         Planet= ImageMobject("earth_2.png").scale(0.25)
         Planet.move_to(planet_pos)
         planet_center=Planet.get_center()
